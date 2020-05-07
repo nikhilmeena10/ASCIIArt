@@ -9,7 +9,7 @@ asciiS = "`^\",:;Il!i~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
 #im = Image.open("tt0083866.jpg")
 #im = Image.open("tt0974015.jpg")
 im = Image.open("tt2911666.jpg")
-size = 100,100
+size = 200,200
 im.thumbnail(size, Image.ANTIALIAS)
 #print(im.format, im.size, im.mode)
 iar = np.asarray(im)
