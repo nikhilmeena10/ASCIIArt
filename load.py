@@ -1,20 +1,20 @@
 from PIL import Image
 import numpy as np
 asciiS = "`^\",:;Il!i~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
-print(len(asciiS))
+#print(len(asciiS))
 #im = Image.open("2rgh5r.jpg")
-im = Image.open("iron-man.jpg")
+#im = Image.open("iron-man.jpg")
 #im = Image.open("tt0060196.jpg")
 #im = Image.open("tt0068646.jpg")
 #im = Image.open("tt0083866.jpg")
 #im = Image.open("tt0974015.jpg")
-#im = Image.open("tt2911666.jpg")
-size = 200,200
+im = Image.open("tt2911666.jpg")
+size = 100,100
 im.thumbnail(size, Image.ANTIALIAS)
-print(im.format, im.size, im.mode)
+#print(im.format, im.size, im.mode)
 iar = np.asarray(im)
-print(iar)
-print(iar.shape)
+#print(iar)
+#print(iar.shape)
 height = len(iar)
 width = len(iar[0])
 brightness = np.zeros((height, width))
