@@ -1,6 +1,6 @@
 from PIL import Image
 import numpy as np
-asciiS = "`^\",:;Il!i~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
+asciiS = " .,:irs?@9B&#"#"`^\",:;Il!i~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$""`^\",:;Il!i~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
 #print(len(asciiS))
 #im = Image.open("2rgh5r.jpg")
 #im = Image.open("iron-man.jpg")
@@ -13,6 +13,7 @@ size = 200,200
 im.thumbnail(size, Image.ANTIALIAS)
 #print(im.format, im.size, im.mode)
 iar = np.asarray(im)
+print(iar.max())
 #print(iar)
 #print(iar.shape)
 height = len(iar)
@@ -29,7 +30,8 @@ scaledA = np.zeros((height, width))
 for x in range(height):
     for y in range(width):
         brightnessVal = brightness[x][y]
-        scaledA = asciiS[int(brightnessVal*65/255)-1]
+        scaledA = asciiS[int(brightnessVal*(len(asciiS)-1)/255)]
+        #scaledA = asciiS[int(brightnessVal*len(asciiS)/255)-1]
         print(scaledA+scaledA+scaledA, end='')
         #f.write(scaledA+scaledA+scaledA)
     print("\n")
