@@ -6,4 +6,4 @@ Using the Python Pillow module, convert an image into 2D array of RGB pixels. No
 
 ![alt text](ironmanascii.PNG)
 
-![alt text](johnwickascii.PNG)
+![alt text](johnwickascii.png)
